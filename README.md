@@ -15,3 +15,22 @@ The configuration exposed will be created from the following paths (settings in 
 ## YAML
 
 Config files are defined using YAML. See http://yaml.org/
+
+## How to Use
+
+Example defaults.yml:
+```yaml
+server:
+  hostname: www.myapp.com
+  port: 80
+```
+
+```js
+var config = require('loke-config').create('myapp');
+
+var hostname = config.get('server.hostname');
+var port = config.get('server.port');
+
+console.log(hostname); // www.myapp.com
+console.log(port); // 80
+```
