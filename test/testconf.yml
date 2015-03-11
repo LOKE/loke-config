@@ -1,0 +1,7 @@
+filekey: filevalue
+
+parent:
+  boolean: true
+  string: string
+  number: 100
+  stringNumber: "100"

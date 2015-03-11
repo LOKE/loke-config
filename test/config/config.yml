@@ -1,0 +1,4 @@
+parent:
+  boolean: false
+  child:
+    anotherValue: 'test'

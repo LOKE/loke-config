@@ -1,0 +1,21 @@
+{
+  "name": "loke-config",
+  "version": "1.0.0",
+  "description": "LOKE application configuration management",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint --rulesdir eslint-rules .",
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "",
+  "dependencies": {
+    "js-yaml": "^3.2.7"
+  },
+  "devDependencies": {
+    "eslint": "^0.9.1",
+    "mocha": "^2.0.1"
+  }
+}
