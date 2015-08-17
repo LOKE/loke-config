@@ -7,15 +7,24 @@
     "lint": "eslint --rulesdir eslint-rules .",
     "test": "mocha test"
   },
-  "repository": {
-    "type": "git"
-  },
   "author": "",
   "dependencies": {
     "js-yaml": "^3.2.7"
   },
   "devDependencies": {
-    "eslint": "^0.9.1",
-    "mocha": "^2.0.1"
-  }
+    "eslint": "^1.1.0",
+    "mocha": "^2.2.5"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LOKE/loke-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LOKE/loke-config/issues"
+  },
+  "homepage": "https://github.com/LOKE/loke-config#readme"
 }
