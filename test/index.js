@@ -2,13 +2,11 @@ var LokeConfig = require('../lib').LokeConfig;
 var assert = require('assert');
 var path = require('path');
 
-var confpath = path.join(__dirname, 'testconf.yml');
-
 describe('LokeConfig', function () {
   var conf;
   var paths = [
-    __dirname + '/config/defaults.yml',
-    __dirname + '/config/config.yml'
+    path.join(__dirname, '/config/defaults.yml'),
+    path.join(__dirname, '/config/config.yml')
   ];
 
   beforeEach(function () {
@@ -34,7 +32,7 @@ describe('LokeConfig', function () {
     it('should override values higher level configs', function () {
       assert.strictEqual(conf.get('parent.boolean'), false);
     });
-    
+
   });
 
 
@@ -43,8 +41,8 @@ describe('LokeConfig', function () {
     it('should not allow properties that dont exist in the defaults model', function (done) {
       try {
         var paths = [
-          __dirname + '/config/defaults.yml',
-          __dirname + '/config/fail.yml'
+          path.join(__dirname, '/config/defaults.yml'),
+          path.join(__dirname, '/config/fail.yml')
         ];
         conf = new LokeConfig('demo', paths);
         done(new Error('Should have thrown error'));
@@ -52,7 +50,7 @@ describe('LokeConfig', function () {
         done();
       }
     });
-    
+
   });
 
 });
