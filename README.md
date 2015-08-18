@@ -12,6 +12,10 @@ The configuration exposed will be created from the following paths (settings in 
 - /etc/{app_name}/config.yml
 - {app_path}/config/defaults.yml
 
+However, if the process has a `--config [filename]` argument, then that file will be used instead.
+
+The `defaults.yml` file is required, and all configuration keys must have a value listed in the `defaults.yml`.
+
 ## YAML
 
 Config files are defined using YAML. See http://yaml.org/
