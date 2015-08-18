@@ -9,7 +9,8 @@
   },
   "author": "",
   "dependencies": {
-    "js-yaml": "^3.2.7"
+    "js-yaml": "^3.2.7",
+    "minimist": "^1.1.3"
   },
   "devDependencies": {
     "eslint": "^1.1.0",
