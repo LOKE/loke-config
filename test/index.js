@@ -38,17 +38,12 @@ describe('LokeConfig', function () {
 
   describe('default model', function () {
 
-    it('should not allow properties that dont exist in the defaults model', function (done) {
-      try {
-        var paths = [
-          path.join(__dirname, '/config/defaults.yml'),
-          path.join(__dirname, '/config/fail.yml')
-        ];
-        conf = new LokeConfig('demo', paths);
-        done(new Error('Should have thrown error'));
-      } catch (err) {
-        done();
-      }
+    it('should allow properties that don\'t exist in the defaults model', function () {
+      var paths = [
+        path.join(__dirname, '/config/defaults.yml'),
+        path.join(__dirname, '/config/fail.yml')
+      ];
+      conf = new LokeConfig('demo', paths);
     });
 
   });
