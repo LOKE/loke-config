@@ -38,16 +38,21 @@ describe('LokeConfig', function () {
 
   describe('default model', function () {
 
-    it('should not allow properties that dont exist in the defaults model', function (done) {
+    it('should allow properties that don\'t exist in the defaults model', function () {
+      var paths = [
+        path.join(__dirname, '/config/defaults.yml'),
+        path.join(__dirname, '/config/fail.yml')
+      ];
+      conf = new LokeConfig('demo', paths);
+      var hasException = false;
       try {
-        var paths = [
-          path.join(__dirname, '/config/defaults.yml'),
-          path.join(__dirname, '/config/fail.yml')
-        ];
-        conf = new LokeConfig('demo', paths);
-        done(new Error('Should have thrown error'));
-      } catch (err) {
-        done();
+        conf.get('notindefaults');
+      } catch (ex) {
+        hasException = true;
+        assert.strictEqual('Could not find configuration for "notindefaults".', ex.message);
+      }
+      if (!hasException) {
+        throw new Error('Expected an exception when requesting missing key.');
       }
     });
 
