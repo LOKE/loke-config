@@ -44,6 +44,16 @@ describe('LokeConfig', function () {
         path.join(__dirname, '/config/fail.yml')
       ];
       conf = new LokeConfig('demo', paths);
+      var hasException = false;
+      try {
+        conf.get('notindefaults');
+      } catch (ex) {
+        hasException = true;
+        assert.strictEqual('Could not find configuration for "notindefaults".', ex.message);
+      }
+      if (!hasException) {
+        throw new Error('Expected an exception when requesting missing key.');
+      }
     });
 
   });
