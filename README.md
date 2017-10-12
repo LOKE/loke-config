@@ -38,3 +38,13 @@ var port = config.get('server.port');
 console.log(hostname); // www.myapp.com
 console.log(port); // 80
 ```
+
+### Environment Variables
+
+You can also override variables using environment variables.
+Specify them in upper case, and replace `.` with `__` (double underscore).
+
+eg:
+```
+SERVER__HOSTNAME=www.mynewapp.com npm start
+```
