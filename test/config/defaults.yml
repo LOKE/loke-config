@@ -5,6 +5,7 @@ parent:
   string: string
   number: 100
   stringNumber: "100"
+  nullable: fa	lse
   child:
     nestedValue: 0
     anotherValue: 1

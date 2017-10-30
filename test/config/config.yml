@@ -1,4 +1,5 @@
 parent:
   boolean: false
+  nullable: null
   child:
     anotherValue: 'test'

@@ -33,7 +33,13 @@ describe('LokeConfig', function () {
       assert.strictEqual(conf.get('parent.boolean'), false);
     });
 
+    it('should override values higher level even when null', function () {
+      assert.strictEqual(conf.get('parent.nullable'), null);
+    });
+
   });
+
+
 
 
   describe('default model', function () {
