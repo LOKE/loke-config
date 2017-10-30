@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- '6'
+- '8'
+deploy:
+  provider: npm
+  email: npm@loke.com.au
+  api_key:
+    secure: TyUtU0fpU86tFTPSHGaLMDYqaxTO/QezjUTh0dSN1PuwCSH0xaqM2SdSf8twtjSD5H696snVhs08X5F++5gKWPQiRcz/GE5bRV7/Sc3Be8ZXb0fn2WvrmRnySFSkNYCExOwqhzlhczOccnAQIq39+HcaQYvKuDF5SNltl6I+5jc=
+  on:
+    tags: true
+    repo: LOKE/loke-config
