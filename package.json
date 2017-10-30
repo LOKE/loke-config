@@ -1,6 +1,6 @@
 {
   "name": "@loke/config",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "LOKE application configuration management",
   "main": "lib/index.js",
   "scripts": {
